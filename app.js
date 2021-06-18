@@ -6,16 +6,13 @@ const numGen = () => {
 }
 
 const chooseStory = (number, arr) => {
-    //console.log(number)
+    let num = Math.floor(Math.random() * 3)
     if(number===0){
-        let num = Math.floor(Math.random() * 3)
-        return `Beautiful ${arr[num]}`
+        return `The ${arr[num]} is perfect in ${arr[3][num]} and the stars are ${arr[4][num]}`
     }else if(number===1){
-        //let num = Math.floor(Math.random() * 3) + 3
-        let nextNum = Math.floor(Math.random() * 3)
-        return `Ugly ${arr[3][nextNum]}`
+        return `Goodbye ${arr[num]}, this country now belongs to ${arr[3][num]}`
     }else
-        return `Bright ${arr[2]}`
+        return `No more ${arr[num]} it's flag has changed to the color ${arr[4][num]}`
 }
 
 console.log(chooseStory(numGen(),arr))
